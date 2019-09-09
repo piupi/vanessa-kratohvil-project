@@ -1,0 +1,28 @@
+:root {
+  --primary: #5c9090;
+  --primary-variant: #235258;
+  --secondary: #f7b09d;
+  --secondary-variant: #edcabd;
+  --white: #f7f6f4;
+  --gray: #c8d1cc;
+  --gray-variant: #3a4a4c;
+}
+
+h2 {
+  background-color: var(--primary);
+  margin: calc(var(--base-spacing) * 2);
+  color: var(--white);
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Merriweather", serif;
+}
+
+p {
+  color: #3a4a4c;
+}
+
+a {
+  color: var(--gray-variant);
+}
