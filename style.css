@@ -1,3 +1,45 @@
+:root {
+  --primary: ##5c9090;
+  --primary-variant: #235258;
+  --secondary: #F7B09D;
+  --secondary-variant: #EDCABD;
+  --white: #F7F6F4;
+  --gray: #C8D1CC;
+  --gray-variant: #3A4A4C;
+}
+
+h2 {
+  background-color: var(--primary);
+  margin: calc(var(--base-spacing) *2);
+  color: var(--white);
+}
+
 body {
+  background-color: var(--white);
   font-family: 'Merriweather', serif;
+}
+
+
+
+
+
+
+
+#firstParagraph {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+#secondParagraph {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+#container {
+  --first-color: #48ff32;
+}
+
+#thirdParagraph {
+  background-color: var(--first-color);
+  color: var(--second-color);
 }
