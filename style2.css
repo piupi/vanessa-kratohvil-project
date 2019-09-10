@@ -4,25 +4,45 @@
   --secondary: #f7b09d;
   --secondary-variant: #edcabd;
   --white: #f7f6f4;
-  --gray: #c8d1cc;
+  --gray: #C8D1CC;
   --gray-variant: #3a4a4c;
+  --base-spacing: 4px;
 }
 
 h2 {
   background-color: var(--primary);
-  margin: calc(var(--base-spacing) * 2);
+  margin: calc(var(--base-spacing) * 4);
+  padding: calc(var(--base-spacing) * 1);
   color: var(--white);
 }
 
 body {
   background-color: var(--white);
   font-family: "Merriweather", serif;
+  margin: calc(var(--base-spacing) * 8)
 }
 
 p {
-  color: #3a4a4c;
+  color: var(--gray-variant);
 }
 
 a {
   color: var(--gray-variant);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+section {
+  margin-bottom: calc(var(--base-spacing) * 8);
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--secondary-variant);
+}
+
+header {
+  background-color: var(--gray);
+  padding: calc(var(--base-spacing) * 2);
 }
