@@ -46,3 +46,27 @@ header {
   background-color: var(--gray);
   padding: calc(var(--base-spacing) * 2);
 }
+
+//Layout
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  box-shadow: calc(var(--base-spacing) * 0.5)var(--base-spacing);
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
