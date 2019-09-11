@@ -7,6 +7,8 @@
   --gray: #C8D1CC;
   --gray-variant: #3a4a4c;
   --base-spacing: 4px;
+  --border-primary: solid var(--primary-variant) 3px;
+  --border-secondary: solid var(--secondary-variant) 3px;
 }
 
 h2 {
@@ -113,16 +115,23 @@ nav .is-hidden {
   height: 0;
 }
 
-/* nav {
+nav {
   border-top: var(--border-secondary);
-  border-bottom:
+  border-bottom: var(--border-secondary);
   min-height: 72px;
-} */
+}
 
 
 .hero {
   background: url(https://picsum.photos/680/420) center center no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 20vh;
   max-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border-top: var(--border-primary);
 }
