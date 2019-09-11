@@ -118,3 +118,10 @@ nav .is-hidden {
   border-bottom:
   min-height: 72px;
 } */
+
+
+.hero {
+  background: url(https://picsum.photos/680/420) center center no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
