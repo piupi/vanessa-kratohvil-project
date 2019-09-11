@@ -121,6 +121,11 @@ nav {
   min-height: 72px;
 }
 
+nav a,
+.hero a {
+  text-decoration: none;
+}
+
 
 .hero {
   background: url(https://picsum.photos/680/420) center center no-repeat;
@@ -131,6 +136,18 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+
+.hero a {
+  background-color: var(--secondary);
+  padding: var(--base-spacing);
+  border-radius: var(--base-spacing);
+  box-shadow: calc(var(--base-spacing) * 0.5)var(--base-spacing);
+}
+
+/* .hero a:hover {
+  background-color: var(--secondary-variant);
+} */
 
 footer {
   border-top: var(--border-primary);
