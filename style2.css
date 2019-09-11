@@ -54,6 +54,8 @@ header {
 
 nav .fas {
   margin: var(--base-spacing);
+  transform: translateX(calc(100vw - 72px));
+  position: absolute;
 }
 
 /*Layout*/
