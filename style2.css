@@ -152,3 +152,14 @@ nav a,
 footer {
   border-top: var(--border-primary);
 }
+
+section {
+  padding: calc(var(--base-spacing) * 3);
+}
+
+.read-more-btn {
+  background: white;
+  padding: var(--base-spacing);
+  border-radius: var(--base-spacing);
+  margin: var(--base-spacing);
+}
