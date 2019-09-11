@@ -105,3 +105,16 @@ ul {
 /* nav a:hover {
   background: var(--secondary-variant);
 } */
+
+
+nav .is-hidden {
+  min-height: 72px;
+  font-size: 0;
+  height: 0;
+}
+
+/* nav {
+  border-top: var(--border-secondary);
+  border-bottom:
+  min-height: 72px;
+} */
