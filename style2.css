@@ -36,9 +36,16 @@ a:hover {
   color: var(--secondary);
 }
 
+
+section {
+  padding: calc(var(--base-spacing) * 3);
+}
+
 section {
   margin-bottom: calc(var(--base-spacing) * 8);
 }
+
+
 
 section:nth-of-type(odd) {
   background-color: var(--secondary-variant);
@@ -102,6 +109,7 @@ nav li {
 ul {
   padding: 0;
   text-align: center;
+  list-style-type: none;
 }
 
 /* nav a:hover {
@@ -151,10 +159,16 @@ nav a,
 
 footer {
   border-top: var(--border-primary);
+  padding: calc(var(--base-spacing) * 2);
 }
 
-section {
-  padding: calc(var(--base-spacing) * 3);
+footer a {
+  color: silver;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 .read-more-btn {
