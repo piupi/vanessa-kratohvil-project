@@ -19,7 +19,7 @@ h2 {
 body {
   background-color: var(--white);
   font-family: "Merriweather", serif;
-  margin: calc(var(--base-spacing) * 8)
+  margin: calc(var(--base-spacing) * 2)
 }
 
 p {
@@ -47,7 +47,16 @@ header {
   padding: calc(var(--base-spacing) * 2);
 }
 
-//Layout
+
+.fas {
+  font-size: 48px;
+}
+
+nav .fas {
+  margin: var(--base-spacing);
+}
+
+/*Layout*/
 
 header {
   display: flex;
@@ -63,10 +72,34 @@ h1 {
 img {
   border-radius: 50%;
   box-shadow: calc(var(--base-spacing) * 0.5)var(--base-spacing);
+  margin-bottom: 16px;
 }
 
-figure {
+/* figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+
+/* Nav */
+nav ul {
+  list-style-type: none;
 }
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  padding: var(--base-spacing) 0;
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+}
+
+/* nav a:hover {
+  background: var(--secondary-variant);
+} */
