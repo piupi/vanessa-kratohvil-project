@@ -190,8 +190,25 @@ section {
 @media screen and (min-width: 768px) {
   header {
     display: flex;
-    flex-direction: column;
-    background-color: orange;
+    flex-direction: row;
+    padding: 32px;
+    background-color: var(--primary);
+    align-content: center;
   }
 
+  @media screen and (min-width: 1068px) {
+    header {
+      display: flex;
+      flex-direction: row;
+      padding: 100px;
+      align-items: center;
+    }
+  }
+
+
+
+
+
+
 }
+
