@@ -176,4 +176,22 @@ footer ul {
   padding: var(--base-spacing);
   border-radius: var(--base-spacing);
   margin: var(--base-spacing);
+  max-width: 120px;
+  align-self: center;
+  text-align: center;
+  max-width: calc(var(--base-spacing) * )
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+  }
+
 }
