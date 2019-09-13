@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vanessa Kratohvil Portfolio</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="style2.css">
-
+    <link rel="stylesheet" href="style2.css" />
   </head>
 
   <body>
     <header id="test-id" class="test-class">
-        <i class="fas fa-cat"></i>
+      <i class="fas fa-cat"></i>
       <figure>
         <img
           srcset="
@@ -32,14 +36,12 @@
           src="https://picsum.photos/600"
           alt="Lorem Picsum"
         />
-
-
       </figure>
       <h1>Vanessa Kratohvil Practice Project</h1>
     </header>
     <nav>
-      <span class="fas fa-bars"></span>
-      <ul class="is-hidden">
+      <span class="fas fa-bars is-hidden--desktop"></span>
+      <ul class="is-hidden--mobile is-hidden--tablet  is-shown--desktop">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about/">About</a></li>
         <li><a href="./contact/">Contact</a></li>
@@ -48,56 +50,55 @@
       </ul>
     </nav>
     <main>
-
-
-    <div class="hero">
+      <div class="hero">
         <a href="#">Fake CTA Button</a>
+      </div>
 
-    </div>
-
-      <section>
-        <h2>Some Fake Heading</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          ipsa. Dolor voluptas necessitatibus quibusdam architecto repudiandae
-          repellendus quis amet neque voluptatum commodi ea fuga, quo, itaque
-          maiores, dolorum quaerat magni.
-        </p>
-        <a class="read-more-btn" href="">Read More</a>
-      </section>
-      <section>
-        <h2>Some Fake Heading</h2>
-        <p>
-          Quae natus facere quas vel ea consectetur, rem eius? Sed earum
-          assumenda aperiam aspernatur quos dicta libero eaque deleniti
-          doloremque fugiat ad sequi voluptatibus et nihil repellendus quia,
-          explicabo necessitatibus?
-        </p>
-        <a class="read-more-btn" href="">Read More</a>
-      </section>
-      <section>
-        <h2>Some Fake Heading</h2>
-        <p>
-          Facilis ratione neque aliquam ea odit eveniet a, deleniti dignissimos
-          reprehenderit, labore error sed eaque repudiandae quo iure id
-          obcaecati earum quidem explicabo optio. Perferendis exercitationem
-          eligendi nobis natus enim.
-        </p>
-        <a class="read-more-btn" href="">Read More</a>
-      </section>
-      <footer>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about/">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Gallery</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-
-        <p>&copy; 2019 Frog no rights reserved</p>
-      </footer>
+      <div class="flex-container--desktop">
+        <section>
+          <h2>Some Fake Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            ipsa. Dolor voluptas necessitatibus quibusdam architecto repudiandae
+            repellendus quis amet neque voluptatum commodi ea fuga, quo, itaque
+            maiores, dolorum quaerat magni.
+          </p>
+          <a class="read-more-btn" href="">Read More</a>
+        </section>
+        <section>
+          <h2>Some Fake Heading</h2>
+          <p>
+            Quae natus facere quas vel ea consectetur, rem eius? Sed earum
+            assumenda aperiam aspernatur quos dicta libero eaque deleniti
+            doloremque fugiat ad sequi voluptatibus et nihil repellendus quia,
+            explicabo necessitatibus?
+          </p>
+          <a class="read-more-btn" href="">Read More</a>
+        </section>
+        <section>
+          <h2>Some Fake Heading</h2>
+          <p>
+            Facilis ratione neque aliquam ea odit eveniet a, deleniti
+            dignissimos reprehenderit, labore error sed eaque repudiandae quo
+            iure id obcaecati earum quidem explicabo optio. Perferendis
+            exercitationem eligendi nobis natus enim.
+          </p>
+          <a class="read-more-btn" href="">Read More</a>
+        </section>
+      </div>
     </main>
 
+    <footer>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about/">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+
+      <p>&copy; 2019 Frog no rights reserved</p>
+    </footer>
     <!-- <footerclass="r></footerclass="read-more-btn" >
     </main> -->
   </body>

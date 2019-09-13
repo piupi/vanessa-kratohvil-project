@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vanessa Kratohvil Practice Project | Contact</title>
+  </head>
+
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style2.css" />
+  </head>
+
+
 <body>
-    
-</body>
+    <header id="test-id" class="test-class">
+      <i class="fas fa-cat"></i>
+      <figure>
+        <img
+          srcset="
+            https://picsum.photos/200,
+            https://picsum.photos/300 1.5x,
+            https://picsum.photos/400 2x,
+            https://picsum.photos/600 3x
+          "
+          src="https://picsum.photos/600"
+          alt="Lorem Picsum"
+        />
+      </figure>
+      <h1>Vanessa Kratohvil Practice Project</h1>
+    </header>
+    <nav>
+      <span class="fas fa-bars is-hidden--desktop"></span>
+      <ul class="is-hidden--mobile is-hidden--tablet  is-shown--desktop">
+        <li><a href="../">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="./">Contact</a></li>
+        <li><a href="../gallery/">Gallery</a></li>
+        <li><a href="../blog/">Blog</a></li>
+      </ul>
+    </nav>
+
+
+    <main>
+        <form action="">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                 <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                 <input type="tel" id="phone">
+            </div>
+            <div>
+                <label for="msg">Enter your message:</label>
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+      <footer>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../about/">About</a></li>
+          <li><a href="./">Contact</a></li>
+          <li><a href="../gallery/">Gallery</a></li>
+          <li><a href="../blog/">Blog</a></li>
+        </ul>
+
+        <p>&copy; 2019 Frog no rights reserved</p>
+      </footer>
+  </body>
 </html>
