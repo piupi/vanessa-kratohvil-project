@@ -225,6 +225,12 @@ section {
   .flex-container--desktop {
     display: flex;
   }
+
+  .flex-row--desktop {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 
 
@@ -259,4 +265,26 @@ input[type="submit"] {
   color: var(--grey);
   border-radius: var(--base-spacing);
   margin: 20px 0;
+}
+
+
+#submit {
+  margin-left: 6px;
+}
+
+#msg {
+  max-width: 662px;
+}
+
+.is-error {
+  border: 1px solid red;
+}
+
+.is-success {
+  border: 1px solid green;
+}
+
+#pls-center {
+  display: flex;
+  justify-content: center;
 }
