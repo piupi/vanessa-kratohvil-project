@@ -5,12 +5,19 @@
 
 //write function where i can pass in a string that will end up being in the window prompt
 function greeter(question = "What is your name?") {
-  return prompt(question);
+  let answer = prompt(question);
+
+  if (answer === ""){
+    greeter(); //recursion
+  }
+  return answer;
 }
 
-const answer = greeter();
+let answer = greeter();
 console.log(answer);
 
+
+//TODO resolve issue where h1 is not updated if user gives blank answer
 
 //replace h1 with their name
 const h1TextContent = document.querySelector('h1').textContent = answer;
@@ -24,3 +31,4 @@ const h1TextContent = document.querySelector('h1').textContent = answer;
 //
 // console.log(h1TextContent);
 
+//if answer is blank string, ask the question again
