@@ -17,15 +17,16 @@ function greeter(question = "What is your name?") {
 let answer = greeter();
 console.log(answer);
 
+// TODO use template literals to inject greeter() inside of some <p>s
 
-//TODO resolve issue where h1 is not updated if user gives blank answer
+document.querySelector("#root").innerHTML = `<p>${greeter()}</p>`
 
 
-const getter = document.querySelector('h1').textContent;
-//replace h1 with their name
-const h1Textcontent = document.querySelector('h1').textContent = answer;
-//another version
-//const h1TextContent = document.querySelector('h1').textContent = greeter(); // get rid of answer variable
+// const getter = document.querySelector('h1').textContent;
+// //replace h1 with their name
+// const h1Textcontent = document.querySelector('h1').textContent = answer;
+// //another version
+// //const h1TextContent = document.querySelector('h1').textContent = greeter(); // get rid of answer variable
 
 
 //const h1 = document.querySelector('h1');
