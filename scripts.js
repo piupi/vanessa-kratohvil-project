@@ -8,7 +8,8 @@ function greeter(question = "What is your name?") {
   let answer = prompt(question);
 
   if (answer === ""){
-    greeter(); //recursion
+    return greeter();
+     //recursion
   }
   return answer;
 }
@@ -19,8 +20,10 @@ console.log(answer);
 
 //TODO resolve issue where h1 is not updated if user gives blank answer
 
+
+const getter = document.querySelector('h1').textContent;
 //replace h1 with their name
-const h1TextContent = document.querySelector('h1').textContent = answer;
+const h1Textcontent = document.querySelector('h1').textContent = answer;
 //another version
 //const h1TextContent = document.querySelector('h1').textContent = greeter(); // get rid of answer variable
 
