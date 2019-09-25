@@ -1,38 +1,13 @@
-// const msg = prompt("What is your name?");
+// select fa hamburgie
+// listen for oa click on HAMBURGER
+// remove mobile hidden class from menu ul (is-hidden--mobile)
 
-// console.log(msg)
+const hiddenUL = document.querySelector('ul');
+const hamburger = document.querySelector('.fa-bars');
 
-
-//write function where i can pass in a string that will end up being in the window prompt
-function greeter(question = "What is your name?") {
-  let answer = prompt(question);
-
-  if (answer === ""){
-    return greeter();
-     //recursion
-  }
-  return answer;
-}
-
-let answer = greeter();
-console.log(answer);
-
-// TODO use template literals to inject greeter() inside of some <p>s
-
-document.querySelector("#root").innerHTML = `<p>${greeter()}</p>`
+console.log(hamburger, hiddenUL)
 
 
-// const getter = document.querySelector('h1').textContent;
-// //replace h1 with their name
-// const h1Textcontent = document.querySelector('h1').textContent = answer;
-// //another version
-// //const h1TextContent = document.querySelector('h1').textContent = greeter(); // get rid of answer variable
-
-
-//const h1 = document.querySelector('h1');
-//const textContent = h1.textContent;
-
-//
-// console.log(h1TextContent);
-
-//if answer is blank string, ask the question again
+hamburger.addEventListener('click', function(){
+  hiddenUL.classList.toggle("is-hidden--mobile");
+})
