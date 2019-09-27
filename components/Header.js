@@ -1,5 +1,5 @@
-export default
-`<header id="test-id" class="test-class">
+export default function(heading) {
+return `<header id="test-id" class="test-class">
 <i class="fas fa-cat"></i>
 <figure>
   <img
@@ -13,5 +13,6 @@ export default
     alt="Lorem Picsum"
   />
 </figure>
-<h1>Vanessa Kratohvil Practice Project</h1>
+<h1>${heading}</h1>
 </header>`
+}

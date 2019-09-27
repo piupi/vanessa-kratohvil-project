@@ -24,6 +24,7 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "http-server": "0.8.0",
+    "parcel": "^1.12.3",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",

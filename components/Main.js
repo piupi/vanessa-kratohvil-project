@@ -1,5 +1,5 @@
-export default
-`<main>
+export default function(main) {
+return `<main>
 <div class="hero">
   <a href="#">Fake CTA Button</a>
 </div>
@@ -37,3 +37,4 @@ export default
   </section>
 </div>
 </main>`
+}
