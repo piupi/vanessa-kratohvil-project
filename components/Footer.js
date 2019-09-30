@@ -9,5 +9,6 @@ return `<footer>
       </ul>
 
       <p>&copy; 2019 Frog no rights reserved</p>
-    </footer>`
+    </footer>
+    `;
 }

@@ -8,5 +8,6 @@ return `<nav>
   <li><a href="./gallery/">Gallery</a></li>
   <li><a href="./blog/">Blog</a></li>
 </ul>
-</nav>`
+</nav>
+`;
 }

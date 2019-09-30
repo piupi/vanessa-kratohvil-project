@@ -14,5 +14,6 @@ return `<header id="test-id" class="test-class">
   />
 </figure>
 <h1>${heading}</h1>
-</header>`
+</header>
+`;
 }
