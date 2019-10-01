@@ -5,10 +5,20 @@ import { Header, Nav, Main, Footer } from "./components";
 // import Main from "./components/Main";
 // import Footer from "./components/Footer";
 
+// Use state to render the appropriate heading depending on the state of the app - what pg is  currently selected or being displayed
 
+
+const state = {
+  Home: {
+    heading: "Home Page"
+  },
+  About: {
+    heading: "About Page"
+  }
+}
 
 document.querySelector("#root").innerHTML = `
-${Header("HELLO FROM HEADER SPA")}
+${Header(state.Home.heading)}
 ${Nav()}
 ${Main()}
 ${Footer(1995)}
