@@ -1,4 +1,4 @@
-export default function(year) {
+export default function(year = "2019") {
 return `<footer>
       <ul>
         <li><a href="./index.html">Home</a></li>
