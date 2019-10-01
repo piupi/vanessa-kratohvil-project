@@ -1,4 +1,4 @@
-export default function(footer) {
+export default function(year) {
 return `<footer>
       <ul>
         <li><a href="./index.html">Home</a></li>
@@ -8,7 +8,9 @@ return `<footer>
         <li><a href="">Blog</a></li>
       </ul>
 
-      <p>&copy; 2019 Frog no rights reserved</p>
+      <p>&copy; ${year} Frog no rights reserved</p>
     </footer>
     `;
 }
+
+

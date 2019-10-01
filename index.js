@@ -9,5 +9,5 @@ document.querySelector("#root").innerHTML = `
 ${Header("HELLO FROM HEADER SPA")}
 ${Nav()}
 ${Main()}
-${Footer()}
+${Footer(1995)}
 `;
