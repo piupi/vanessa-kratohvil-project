@@ -23,3 +23,18 @@ ${Nav()}
 ${Main()}
 ${Footer(1995)}
 `;
+
+
+const aboutLink = document.querySelector("#about");
+
+aboutLink.addEventListener('click', function(event){
+  event.preventDefault();
+
+  const aboutElement = event.target;
+  console.log('aboutElement is: ', aboutElement);
+
+  const aboutText = event.target.textContent;
+  console.log('about text is: ', aboutText);
+  console.log(state[aboutText])
+})
+
