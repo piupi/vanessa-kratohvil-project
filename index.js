@@ -17,24 +17,32 @@ const state = {
   }
 }
 
+// the parameter st represents a piece of state
+function render(st = state.Home){
 document.querySelector("#root").innerHTML = `
-${Header(state.Home.heading)}
+${Header(st.heading)}
 ${Nav()}
 ${Main()}
-${Footer(1995)}
+${Footer()}
 `;
+}
+
+render();
 
 
-const aboutLink = document.querySelector("#about");
+const aboutLink = document.querySelector('#about');
 
 aboutLink.addEventListener('click', function(event){
   event.preventDefault();
-
-  const aboutElement = event.target;
-  console.log('aboutElement is: ', aboutElement);
-
-  const aboutText = event.target.textContent;
-  console.log('about text is: ', aboutText);
-  console.log(state[aboutText])
+  render(state[event.target.textContent]);
 })
+
+
+//   const aboutElement = event.target;
+//   console.log('aboutElement is: ', aboutElement);
+
+//   const aboutText = event.target.textContent;
+//   console.log('about text is: ', aboutText);
+//   console.log(state[aboutText]);
+// })
 
