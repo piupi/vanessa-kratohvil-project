@@ -30,13 +30,20 @@ ${Footer()}
 render();
 
 
-const aboutLink = document.querySelector('#about');
+const links = document.querySelectorAll('nav a');
 
-aboutLink.addEventListener('click', function(event){
+//forloop that logs the text content inside each link
+
+for (let i=0; i<links.length; i++){
+  console.log(links[i].textContent);
+  links[i].addEventListener('click', function(event){
   event.preventDefault();
   render(state[event.target.textContent]);
+  console.log(event.target.textContent)
 })
+}
 
+// TODO:
 
 //   const aboutElement = event.target;
 //   console.log('aboutElement is: ', aboutElement);
@@ -44,5 +51,3 @@ aboutLink.addEventListener('click', function(event){
 //   const aboutText = event.target.textContent;
 //   console.log('about text is: ', aboutText);
 //   console.log(state[aboutText]);
-// })
-
