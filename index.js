@@ -1,5 +1,7 @@
 import { Header, Nav, Main, Footer } from "./components";
 
+import { Home, About, Contact, Blog, Gallery, Links } from "./store";
+
 // import Header from "./components/Header";
 // import Nav from "./components/Nav";
 // import Main from "./components/Main";
@@ -26,7 +28,7 @@ const state = {
     links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   blog: {
-    heading: "Blog Page",
+  heading: "Blog Page",
     links: ["Home", "About", "Contact", "Blog", "Gallery"]
   }
 }
