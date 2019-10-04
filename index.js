@@ -10,27 +10,32 @@ import { Header, Nav, Main, Footer } from "./components";
 
 const state = {
   home: {
-    heading: "Home Page"
+    heading: "Home Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   about: {
-    heading: "About Page"
+    heading: "About Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   contact: {
-    heading: "Contact Page"
+    heading: "Contact Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   gallery: {
-    heading: "Gallery Page"
+    heading: "Gallery Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   blog: {
-    heading: "Blog Page"
+    heading: "Blog Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   }
 }
 
 // the parameter st represents a piece of state
 function render(st = state.home){
 document.querySelector("#root").innerHTML = `
-${Header(st.heading)}
-${Nav()}
+${Header(st)}
+${Nav(st)}
 ${Main()}
 ${Footer()}
 `;
@@ -52,11 +57,4 @@ for (let i=0; i<links.length; i++){
 })
 }
 
-// TODO: add links array to each peace of state
-
-//   const aboutElement = event.target;
-//   console.log('aboutElement is: ', aboutElement);
-
-//   const aboutText = event.target.textContent;
-//   console.log('about text is: ', aboutText);
-//   console.log(state[aboutText]);
+// TODO: add links array to each peace of stat

@@ -1,12 +1,19 @@
+function linksBuilder(links){
+  let linksHTML = ""
+  //loop over the links
+  for (let i=0; i<links.length; i+=1){
+    linksHTML += `<li><a href=./${links[i]}">${links[i]}</a></li>`;
+  }
+  //using a template literal we can build out the list item markup
+  return linksHTML;
+}
+
+
 export default function(nav) {
 return `<nav>
 <span class="fas fa-bars is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet  is-shown--desktop">
-  <li><a href="./index.html">Home</a></li>
-  <li><a href="./about/">About</a></li>
-  <li><a href="./contact/">Contact</a></li>
-  <li><a href="./gallery/">Gallery</a></li>
-  <li><a href="./blog/">Blog</a></li>
+  ${linksBuilder(nav.links)}
 </ul>
 </nav>
 `;
