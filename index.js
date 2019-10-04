@@ -44,7 +44,7 @@ ${Footer(st)}
 render();
 
 
-const links = document.querySelectorAll('nav a');
+const links = document.querySelectorAll('nav a, footer a');
 
 //forloop that logs the text content inside each link
 
