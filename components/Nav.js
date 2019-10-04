@@ -11,3 +11,5 @@ return `<nav>
 </nav>
 `;
 }
+
+//TODO: RECIEVve a list of links and dynamically build the navigation menu

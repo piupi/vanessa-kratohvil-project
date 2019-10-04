@@ -9,16 +9,25 @@ import { Header, Nav, Main, Footer } from "./components";
 
 
 const state = {
-  Home: {
+  home: {
     heading: "Home Page"
   },
-  About: {
+  about: {
     heading: "About Page"
+  },
+  contact: {
+    heading: "Contact Page"
+  },
+  gallery: {
+    heading: "Gallery Page"
+  },
+  blog: {
+    heading: "Blog Page"
   }
 }
 
 // the parameter st represents a piece of state
-function render(st = state.Home){
+function render(st = state.home){
 document.querySelector("#root").innerHTML = `
 ${Header(st.heading)}
 ${Nav()}
@@ -38,12 +47,12 @@ for (let i=0; i<links.length; i++){
   console.log(links[i].textContent);
   links[i].addEventListener('click', function(event){
   event.preventDefault();
-  render(state[event.target.textContent]);
-  console.log(event.target.textContent)
+  render(state[event.target.textContent.toLowerCase()]); //idk if i need this line
+  // console.log(event.target.textContent)
 })
 }
 
-// TODO:
+// TODO: add links array to each peace of state
 
 //   const aboutElement = event.target;
 //   console.log('aboutElement is: ', aboutElement);
