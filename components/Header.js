@@ -1,4 +1,4 @@
-export default function(heading) {
+export default function(st) {
 return `<header id="test-id" class="test-class">
 <i class="fas fa-cat"></i>
 <figure>
@@ -13,7 +13,7 @@ return `<header id="test-id" class="test-class">
     alt="Lorem Picsum"
   />
 </figure>
-<h1>${heading}</h1>
+<h1>${st.heading}</h1>
 </header>
 `;
 }

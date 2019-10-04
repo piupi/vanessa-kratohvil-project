@@ -36,8 +36,8 @@ function render(st = state.home){
 document.querySelector("#root").innerHTML = `
 ${Header(st)}
 ${Nav(st)}
-${Main()}
-${Footer()}
+${Main(st)}
+${Footer(st)}
 `;
 }
 
