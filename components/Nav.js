@@ -1,3 +1,6 @@
+import {Links} from "../store"
+
+
 function linksBuilder(links){
   let linksHTML = ""
   //loop over the links
@@ -13,7 +16,7 @@ export default function(nav) {
 return `<nav>
 <span class="fas fa-bars is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet  is-shown--desktop">
-  ${linksBuilder(nav.links)}
+  ${linksBuilder(Links)}
 </ul>
 </nav>
 `;

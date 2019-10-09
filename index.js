@@ -1,6 +1,8 @@
 import { Header, Nav, Main, Footer } from "./components";
+import * as state from "./store";
+// That grabs everything that comes out of store, and puts it in state variable
 
-import { Home, About, Contact, Blog, Gallery, Links } from "./store";
+console.log(state)
 
 // import Header from "./components/Header";
 // import Nav from "./components/Nav";
@@ -9,41 +11,20 @@ import { Home, About, Contact, Blog, Gallery, Links } from "./store";
 
 // Use state to render the appropriate heading depending on the state of the app - what pg is  currently selected or being displayed
 
-
-const state = {
-  home: {
-    heading: "Home Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  about: {
-    heading: "About Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  contact: {
-    heading: "Contact Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  gallery: {
-    heading: "Gallery Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  blog: {
-  heading: "Blog Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  }
-}
-
 // the parameter st represents a piece of state
-function render(st = state.home){
-document.querySelector("#root").innerHTML = `
-${Header(st)}
-${Nav(st)}
-${Main(st)}
-${Footer(st)}
-`;
-}
 
-render();
+
+function render(st = state.Home){
+  document.querySelector("#root").innerHTML = `
+  ${Header(st)}
+  ${Nav(st)}
+  ${Main(st)}
+  ${Footer(st)}
+  `;
+  }
+
+  render();
+
 
 
 const links = document.querySelectorAll('nav a, footer a');
