@@ -12,14 +12,13 @@ function linksBuilder(links){
 }
 
 
-export default function(nav) {
-return `<nav>
+export default (nav) => `<nav>
 <span class="fas fa-bars is-hidden--desktop"></span>
 <ul class="is-hidden--mobile is-hidden--tablet  is-shown--desktop">
   ${linksBuilder(Links)}
 </ul>
 </nav>
 `;
-}
+
 
 //TODO: RECIEVve a list of links and dynamically build the navigation menu
