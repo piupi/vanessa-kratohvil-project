@@ -15,7 +15,6 @@ export default (st) => `<header id="test-id" class="test-class">
 <h1>${st.heading}</h1>
 </header>
 `;
-}
 
 
 //arrow function syntax

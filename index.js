@@ -31,13 +31,21 @@ const links = document.querySelectorAll('nav a, footer a');
 
 //forloop that logs the text content inside each link
 
-for (let i=0; i<links.length; i++){
-  console.log(links[i].textContent);
-  links[i].addEventListener('click', function(event){
+// for (let i=0; i<links.length; i++){
+//   console.log(links[i].textContent);
+//   links[i].addEventListener('click', function(event){
+//   event.preventDefault();
+//   render(state[event.target.textContent.toLowerCase()]); //idk if i need this line
+//   // console.log(event.target.textContent)
+// })
+// }
+
+
+// gettig rid of that for loop
+
+links.forEach(link => link.addEventListener("click", event => {
   event.preventDefault();
-  render(state[event.target.textContent.toLowerCase()]); //idk if i need this line
-  // console.log(event.target.textContent)
-})
-}
+  render(state[event.target.textContent]);
+}));
 
 // TODO: add links array to each peace of stat
