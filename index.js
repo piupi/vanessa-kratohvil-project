@@ -21,13 +21,18 @@ function render(st = state.Home){
   ${Main(st)}
   ${Footer(st)}
   `;
+  const links = document.querySelectorAll('nav a, footer a');
+  links.forEach(link => link.addEventListener("click", event => {
+    event.preventDefault();
+    render(state[event.target.textContent]);
+  }));
   }
 
   render();
 
 
 
-const links = document.querySelectorAll('nav a, footer a');
+
 
 //forloop that logs the text content inside each link
 
@@ -43,9 +48,6 @@ const links = document.querySelectorAll('nav a, footer a');
 
 // gettig rid of that for loop
 
-links.forEach(link => link.addEventListener("click", event => {
-  event.preventDefault();
-  render(state[event.target.textContent]);
-}));
+
 
 // TODO: add links array to each peace of stat
