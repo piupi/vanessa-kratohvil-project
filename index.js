@@ -2,7 +2,11 @@ import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
 // That grabs everything that comes out of store, and puts it in state variable
 
-console.log(location.pathname.slice(1))
+import Navigo from "navigo";
+
+const router = new Navigo();
+
+console.log(location.origin)
 
 // import Header from "./components/Header";
 // import Nav from "./components/Nav";
