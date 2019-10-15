@@ -169,7 +169,6 @@ footer ul {
   max-width: 120px;
   align-self: center;
   text-align: center;
-  max-width: calc(var(--base-spacing) *);
   text-decoration: none;
 }
 
