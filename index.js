@@ -2,7 +2,7 @@ import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
 // That grabs everything that comes out of store, and puts it in state variable
 
-console.log(state)
+console.log(location.pathname.slice(1))
 
 // import Header from "./components/Header";
 // import Nav from "./components/Nav";
