@@ -4,7 +4,7 @@ import * as state from "./store";
 
 import Navigo from "navigo";
 
-const router = new Navigo();
+const router = new Navigo(location.origin);
 
 
 
@@ -26,22 +26,27 @@ function render(st = state.Home){
   ${Main(st)}
   ${Footer(st)}
   `;
-  const links = document.querySelectorAll('nav a, footer a');
-  links.forEach(link => link.addEventListener("click", event => {
-    event.preventDefault();
-    render(state[event.target.textContent]);
-  }));
+
+  router.updatePageLinks(); // shorter version
   }
 
   // render();
 
 
-router
+  router
   // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
-  .on(":page", params => render(state[params.page]))
+  // TODO: Create a 404 page and route all 'bad routes' to that page.
+  .on(":page", params =>
+    render(
+      state[
+        `${params.page.slice(0, 1).toUpperCase()}${params.page
+          .slice(1)
+          .toLowerCase()}`
+      ]
+    )
+  )
   .on("/", render())
   .resolve();
-
 
 
 //forloop that logs the text content inside each link
