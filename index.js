@@ -3,6 +3,7 @@ import * as state from "./store";
 // That grabs everything that comes out of store, and puts it in state variable
 
 import Navigo from "navigo";
+import axios from "axios";
 
 const router = new Navigo(location.origin);
 
@@ -45,24 +46,14 @@ function render(st = state.Home){
       ]
     )
   )
-  .on("/", render())
+  .on("/", () => render())
   .resolve();
 
-
-//forloop that logs the text content inside each link
-
-// for (let i=0; i<links.length; i++){
-//   console.log(links[i].textContent);
-//   links[i].addEventListener('click', function(event){
-//   event.preventDefault();
-//   render(state[event.target.textContent.toLowerCase()]); //idk if i need this line
-//   // console.log(event.target.textContent)
-// })
-// }
-
-
-// gettig rid of that for loop
-
-
-
-// TODO: add links array to each peace of stat
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(response => {
+    console.log("state.blog.main is: ", state.Blog.main);
+    state.Blog.main = response.data;
+    console.log("state.blog.main is: ", state.Blog.main);
+  })
+  .catch(err => console.log(err));
