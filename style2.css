@@ -32,16 +32,28 @@ a {
   color: var(--gray-variant);
 }
 
+footer a {
+  color: silver;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a,
+.hero a {
+  text-decoration: none;
+}
+
 a:hover {
   color: var(--secondary);
 }
 
 section {
-  padding: calc(var(--base-spacing) * 3);
-}
-
-section {
+  display: flex;
+  flex-direction: column;
   margin-bottom: calc(var(--base-spacing) * 8);
+  padding: calc(var(--base-spacing) * 3);
 }
 
 section:nth-of-type(odd) {
@@ -49,7 +61,10 @@ section:nth-of-type(odd) {
 }
 
 header {
+  align-items: center;
   background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
   padding: calc(var(--base-spacing) * 2);
 }
 
@@ -61,14 +76,6 @@ nav .fas {
   margin: var(--base-spacing);
   transform: translateX(calc(100vw - 72px));
   position: absolute;
-}
-
-/*Layout*/
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 h1 {
@@ -88,22 +95,18 @@ img {
 } */
 
 /* Nav */
-nav ul {
-  list-style-type: none;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav li {
-  padding: var(--base-spacing) 0;
-}
-
 ul {
   padding: 0;
   text-align: center;
   list-style-type: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  padding: var(--base-spacing) 0;
 }
 
 /* nav a:hover {
@@ -119,11 +122,6 @@ nav {
   border-top: var(--border-secondary);
   border-bottom: var(--border-secondary);
   min-height: 72px;
-}
-
-nav a,
-.hero a {
-  text-decoration: none;
 }
 
 .hero {
@@ -152,10 +150,6 @@ footer {
   padding: calc(var(--base-spacing) * 2);
 }
 
-footer a {
-  color: silver;
-}
-
 footer ul {
   display: flex;
   justify-content: space-around;
@@ -169,17 +163,11 @@ footer ul {
   max-width: 120px;
   align-self: center;
   text-align: center;
-  max-width: calc(var(--base-spacing) *);
   text-decoration: none;
 }
 
 section p {
   margin-bottom: auto;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,7 +195,6 @@ section {
     max-height: 600px;
   }
 
-
   nav ul {
     display: flex;
     justify-content: space-around;
@@ -230,26 +217,20 @@ section {
     display: flex;
     flex-direction: row;
   }
-
 }
 
-
-
 /* contact page stuff */
-
 form {
   display: flex;
   flex-direction: column;
   padding: var(--base-spacing)
 }
 
-
 input,
 textarea {
   border: 1px solid var(--gray);
   max-width: 80vw;
 }
-
 
 form div {
   display: flex;
