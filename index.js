@@ -4,6 +4,7 @@ import * as state from "./store";
 
 import Navigo from "navigo";
 import axios from "axios";
+import { capitalize } from "lodash";
 
 const router = new Navigo(location.origin);
 
@@ -40,20 +41,48 @@ function render(st = state.Home){
   .on(":page", params =>
     render(
       state[
-        `${params.page.slice(0, 1).toUpperCase()}${params.page
-          .slice(1)
-          .toLowerCase()}`
+        capitalize(params.page)
+        // `${params.page.slice(0, 1).toUpperCase()}${params.page
+        //   .slice(1)
+        //   .toLowerCase()}`
       ]
     )
   )
   .on("/", () => render())
   .resolve();
 
+// axios
+//   .get("https://jsonplaceholder.typicode.com/posts")
+//   .then(response => {
+//     //response.data contains array of 100 post objects
+//     state.Blog.main = response.data.map(post => `
+//     <article>
+//     <h2>{post.title}</h2>
+//     <p>{post.body}</p>
+//     </article>
+//     `;
+//     console.log("after map", state.Blog.main);
+//   })
+//   .catch(err => console.log(err));
+
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
   .then(response => {
-    console.log("state.blog.main is: ", state.Blog.main);
-    state.Blog.main = response.data;
-    console.log("state.blog.main is: ", state.Blog.main);
-  })
+    //response.data contains array of 100 post objects
+    //this is the object destructuring way, so you dont have to use dot notation
+    state.Blog.main = response.data.map(({title, body}) => `
+    <article>
+    <h2>${title}</h2>
+    <p>${body}</p>
+    </article>
+    `
+    ).join("") // turns the array into a string
+
+    if (capitalize(router.lastRouteResolved().params.page) === "Blog") {
+      render(state.Blog);
+    }
+    // console.log("after map", state.Blog.main);
+    // console.log(router.lastRouteResolved());
+    })
   .catch(err => console.log(err));
+
