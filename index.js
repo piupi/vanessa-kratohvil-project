@@ -5,6 +5,9 @@ import * as state from "./store";
 import Navigo from "navigo";
 import axios from "axios";
 import { capitalize } from "lodash";
+import { db } from "./firebase";
+
+console.log(db)
 
 const router = new Navigo(location.origin);
 
@@ -78,7 +81,7 @@ axios
     `
     ).join("") // turns the array into a string
 
-    if (capitalize(router.lastRouteResolved().params.page) === "Blog") {
+    if (router.lastRouteResolved().params && capitalize(router.lastRouteResolved().params.page) === "Blog") {
       render(state.Blog);
     }
     // console.log("after map", state.Blog.main);
