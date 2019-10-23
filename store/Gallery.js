@@ -5,5 +5,9 @@ export default {
   <input type="url" id="imgURL" />
   <input type="text" id="caption" />
   <input type="text" id="credit" />
-  </form>`
+
+  <input type="submit" value="Add pic!">
+  </form>
+
+  `
 }
