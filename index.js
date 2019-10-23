@@ -136,14 +136,15 @@ if (
     console.log(user);
     if (user) {
       // We are logged in!
-      console.log("you are logged in!");
+      console.log("logged in!");
       state.Admin.main = `<button type="button">Log out!</button>`;
-
       render(state.Admin);
+
 
       document.querySelector("button").addEventListener("click", () => {
         auth
           .signOut()
+          // After the signout lets bring back the old login markup
           .then(() => {
             state.Admin.main = `
             <form>
@@ -152,7 +153,6 @@ if (
               <input type="submit" value="Log in!" />
             </form>
           `;
-
           render(state.Admin);
           })
           .catch(err => console.log("Error signing out", err.message));

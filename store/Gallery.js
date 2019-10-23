@@ -1,4 +1,9 @@
 export default {
   heading: "Gallery Page",
-  main: `<p>Loading pics...</p>`
+  main: `
+  <form>
+  <input type="url" id="imgURL" />
+  <input type="text" id="caption" />
+  <input type="text" id="credit" />
+  </form>`
 }
