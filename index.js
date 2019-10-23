@@ -124,3 +124,30 @@ axios
   .catch(err => console.error("Error loading pics", err));
 
 
+ //Admin
+//  if (
+//   router.lastRouteResolved().params &&
+//   capitalize(router.lastRouteResolved().params.page) === "Admin"
+// ) {
+//   render(state.Admin);
+// }
+// render(state.Admin);
+
+// TODO: rather than grabbing each element manually, consider using event.target.elements on the submit event
+const email = document.querySelector('[type="email"]');
+const password = document.querySelector('[type="password"]');
+
+document.querySelector('form').addEventListener("submit", e => {
+e.preventDefault();
+
+auth
+.signInWithEmailAndPassword(email.value, password.value)
+// .then(response => console.log(response))
+.catch(err => console.error("got an error", err.message))
+})
+
+document.querySelector("button").addEventListener("click", () => {
+  auth.signOut().catch(err => console.log("error signing out", err.message))
+})
+
+
