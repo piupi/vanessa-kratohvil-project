@@ -124,30 +124,52 @@ axios
   .catch(err => console.error("Error loading pics", err));
 
 
- //Admin
-//  if (
-//   router.lastRouteResolved().params &&
-//   capitalize(router.lastRouteResolved().params.page) === "Admin"
-// ) {
-//   render(state.Admin);
-// }
-// render(state.Admin);
+// Admin
+// TODO: Rather than grabbing each element manually, consider using (`event.target.elements`) on the `submit` event.
+// Are we on Admin page?
+if (
+  router.lastRouteResolved().params &&
+  capitalize(router.lastRouteResolved().params.page) === "Admin"
+) {
+  // Are we logged in?
+  auth.onAuthStateChanged(user => {
+    console.log(user);
+    if (user) {
+      // We are logged in!
+      console.log("you are logged in!");
+      state.Admin.main = `<button type="button">Log out!</button>`;
 
-// TODO: rather than grabbing each element manually, consider using event.target.elements on the submit event
-const email = document.querySelector('[type="email"]');
-const password = document.querySelector('[type="password"]');
+      render(state.Admin);
 
-document.querySelector('form').addEventListener("submit", e => {
-e.preventDefault();
+      document.querySelector("button").addEventListener("click", () => {
+        auth
+          .signOut()
+          .then(() => {
+            state.Admin.main = `
+            <form>
+              <input type="email" />
+              <input type="password" />
+              <input type="submit" value="Log in!" />
+            </form>
+          `;
 
-auth
-.signInWithEmailAndPassword(email.value, password.value)
-// .then(response => console.log(response))
-.catch(err => console.error("got an error", err.message))
-})
+          render(state.Admin);
+          })
+          .catch(err => console.log("Error signing out", err.message));
+      });
+    } else {
+      const email = document.querySelector('[type="email"]');
+      const password = document.querySelector('[type="password"]');
 
-document.querySelector("button").addEventListener("click", () => {
-  auth.signOut().catch(err => console.log("error signing out", err.message))
-})
+      document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+
+        auth
+          .signInWithEmailAndPassword(email.value, password.value)
+          .catch(err => console.error("Got an error", err.message));
+      });
+    }
+  });
+}
 
 
